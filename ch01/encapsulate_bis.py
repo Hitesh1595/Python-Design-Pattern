@@ -1,6 +1,6 @@
 class Circle:
     def __init__(self, radius : int):
-        self._radius = radius
+        self.radius = radius
 
 
     @property
@@ -15,7 +15,7 @@ class Circle:
 
 
 if __name__ == "__main__":
-    circle = Circle(10)
+    circle = Circle(-1)
     print(f" Intiliaz radius : {circle.radius}")
 
     circle.radius = 10
