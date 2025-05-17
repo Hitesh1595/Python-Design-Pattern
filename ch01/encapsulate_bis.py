@@ -15,10 +15,37 @@ class Circle:
 
 
 if __name__ == "__main__":
-    circle = Circle(-1)
+    circle = Circle(10)
     print(f" Intiliaz radius : {circle.radius}")
 
     circle.radius = 10
     print(f" New Radius: {circle.radius}")
+
+
+from typing import Protocol
+
+class Logger(Protocol):
+    def log(self, message:str):
+        ...
+
+class ConsoleLogger:
+    def log(self,message:str):
+        print(f"Console : {message}")
+
+    def log2(self,message:str):
+        print(f"Console : {message}")
+
+
+
+class FileLogger:
+    def log(self, message:str):
+        print(f"FileLogger : {message}")
+
+def log_message(logger:Logger,message:str):
+    logger.log(message)
+
+
+log_message(ConsoleLogger(),"A console Log")
+log_message(FileLogger(),"A file log")
 
 
