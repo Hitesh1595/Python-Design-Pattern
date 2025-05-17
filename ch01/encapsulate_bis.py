@@ -22,6 +22,8 @@ if __name__ == "__main__":
     print(f" New Radius: {circle.radius}")
 
 
+# object consider valid if it has certain attributes or methods
+# not enforce at runtime
 from typing import Protocol
 
 class Logger(Protocol):
