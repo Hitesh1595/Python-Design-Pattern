@@ -47,7 +47,9 @@ def log_message(logger:Logger,message:str):
     logger.log(message)
 
 
-log_message(ConsoleLogger(),"A console Log")
-log_message(FileLogger(),"A file log")
+if __name__ == "__main__":
+
+    log_message(ConsoleLogger(),"A console Log")
+    log_message(FileLogger(),"A file log")
 
 
